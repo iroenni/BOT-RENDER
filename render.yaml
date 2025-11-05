@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: telegram-system-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python system_bot.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
